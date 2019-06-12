@@ -1,2 +1,2 @@
-# tigereye
-Visualisation component for cobald, tardis, and lapis
+# grafana-tardis-app
+Visualisation component for tardis.
