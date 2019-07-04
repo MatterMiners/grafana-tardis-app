@@ -11,7 +11,7 @@
     }, 
     "keywords": ["grafana", "tardis", "cobald", "opportunistic resources"],
     "logos": {
-      "small": "img/tardis_logo.svg",
+      "small": "img/tardis_logo_grafana.svg",
       "large": "img/tardis_logo.svg"
     },
     "links": [
