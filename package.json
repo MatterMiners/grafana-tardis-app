@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "version": "0.1.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatterMiners/grafana-tardis-app"
+  },
+  "author": "Eileen Kuehn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MatterMiners/grafana-tardis-app/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.5.0",
+    "grunt": "^1.0.4",
+    "grunt-babel": "8.0.0",
+    "grunt-cli": "^1.3.2",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-jshint": "2.1.0",
+    "jshint-stylish": "^2.2.1",
+    "load-grunt-tasks": "5.0.0"
+  },
+  "homepage": "https://matterminers.github.io/"
+}
