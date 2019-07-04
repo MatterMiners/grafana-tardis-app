@@ -1,0 +1,41 @@
+{
+  "type": "app",
+  "name": "TARDIS",
+  "id": "matterminers-tardis-app",
+
+  "info": {
+    "description": "TARDIS Monitoring",
+    "author": {
+      "name": "MatterMiners",
+      "url": "https://matterminers.github.io"
+    }, 
+    "keywords": ["grafana", "tardis", "cobald", "opportunistic resources"],
+    "logos": {
+      "small": "img/tardis_logo.svg",
+      "large": "img/tardis_logo.svg"
+    },
+    "links": [
+      {"name": "GitHub", "url": "https://github.com/MatterMiners/grafana-tardis-app"}, 
+      {"name": "License", "url": "https://github.com/MatterMiners/grafana-tardis-app/blob/master/LICENSE"}, 
+      {"name": "TARDIS GitHub", "url": "https://github.com/MatterMiners/tardis"}, 
+      {"name": "COBalD GitHub", "url": "https://github.com/MatterMiners/cobald"}
+    ],
+    "version": "0.1.0",
+    "updated": "2019-07-04"
+  },
+
+  "includes": [
+    {
+      "type": "dashboard",
+      "name": "TARDIS Home",
+      "path": "dashboards/tardis-home.json",
+      "addToNav": true,
+      "defaultNav": true
+    }
+  ],
+
+  "dependencies": {
+    "grafanaVersion": "3.x 4.x 5.x 6.x",
+    "plugins": []
+  }
+}
