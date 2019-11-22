@@ -31,6 +31,12 @@
       "path": "dashboards/tardis-home.json",
       "addToNav": true,
       "defaultNav": true
+    },
+    {
+      "type": "dashboard",
+      "name": "TARDIS Site Comparison",
+      "path": "dashboards/tardis-site-comparison.json",
+      "addToNav": false
     }
   ],
 
