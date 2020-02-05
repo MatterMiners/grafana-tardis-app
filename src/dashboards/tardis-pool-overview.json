@@ -1,0 +1,2609 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 9,
+  "iteration": 1580906914003,
+  "links": [],
+  "panels": [
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "hiddenSeries": false,
+      "id": 2,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "$tag_pool",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "pool"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "drone_status_caching",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "claimed_slots"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "tardis",
+              "operator": "=~",
+              "value": "/^$lapis$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Claimed slots",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "hiddenSeries": false,
+      "id": 4,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "$tag_pool",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "pool"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "drone_status_caching",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "free_slots"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "tardis",
+              "operator": "=~",
+              "value": "/^$lapis$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Free slots",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 9
+      },
+      "hiddenSeries": false,
+      "id": 8,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "$tag_pool",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "pool"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "resource_status",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "requested_ratio"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "tardis",
+              "operator": "=~",
+              "value": "/^$lapis$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Cluster allocation",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "1",
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 9
+      },
+      "hiddenSeries": false,
+      "id": 6,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Ratio of slots with caching jobs",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    }
+  ],
+  "refresh": false,
+  "schemaVersion": 22,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "selected": true,
+          "text": "lapis-1580471550.1472065",
+          "value": "lapis-1580471550.1472065"
+        },
+        "datasource": "LAPIS InfluxDB",
+        "definition": "SHOW TAG VALUES WITH KEY = \"tardis\" ",
+        "hide": 0,
+        "includeAll": false,
+        "label": "Simulation Run",
+        "multi": false,
+        "name": "lapis",
+        "options": [
+          {
+            "selected": false,
+            "text": "lapis-1576491833.2348144",
+            "value": "lapis-1576491833.2348144"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506419.7860909",
+            "value": "lapis-1576506419.7860909"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506420.0703435",
+            "value": "lapis-1576506420.0703435"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506420.3720973",
+            "value": "lapis-1576506420.3720973"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506420.6410816",
+            "value": "lapis-1576506420.6410816"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506420.8994503",
+            "value": "lapis-1576506420.8994503"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506421.195143",
+            "value": "lapis-1576506421.195143"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506421.4775448",
+            "value": "lapis-1576506421.4775448"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506421.8061643",
+            "value": "lapis-1576506421.8061643"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506422.1067605",
+            "value": "lapis-1576506422.1067605"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506422.3718843",
+            "value": "lapis-1576506422.3718843"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506422.6651094",
+            "value": "lapis-1576506422.6651094"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506422.9544446",
+            "value": "lapis-1576506422.9544446"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506423.2188368",
+            "value": "lapis-1576506423.2188368"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506423.4893124",
+            "value": "lapis-1576506423.4893124"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506423.7554796",
+            "value": "lapis-1576506423.7554796"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506424.0231977",
+            "value": "lapis-1576506424.0231977"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506424.3284526",
+            "value": "lapis-1576506424.3284526"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506424.6200721",
+            "value": "lapis-1576506424.6200721"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506424.8915854",
+            "value": "lapis-1576506424.8915854"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506425.160584",
+            "value": "lapis-1576506425.160584"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506425.4342303",
+            "value": "lapis-1576506425.4342303"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506425.7105365",
+            "value": "lapis-1576506425.7105365"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506425.9806092",
+            "value": "lapis-1576506425.9806092"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506426.2557623",
+            "value": "lapis-1576506426.2557623"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506426.5174038",
+            "value": "lapis-1576506426.5174038"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506426.8384657",
+            "value": "lapis-1576506426.8384657"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506427.1393223",
+            "value": "lapis-1576506427.1393223"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506427.413531",
+            "value": "lapis-1576506427.413531"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506427.6797945",
+            "value": "lapis-1576506427.6797945"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506427.9398162",
+            "value": "lapis-1576506427.9398162"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506428.2133238",
+            "value": "lapis-1576506428.2133238"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506428.469613",
+            "value": "lapis-1576506428.469613"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506428.7337008",
+            "value": "lapis-1576506428.7337008"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506429.0076377",
+            "value": "lapis-1576506429.0076377"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506429.3287199",
+            "value": "lapis-1576506429.3287199"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506429.6177766",
+            "value": "lapis-1576506429.6177766"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506429.8822513",
+            "value": "lapis-1576506429.8822513"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506430.146992",
+            "value": "lapis-1576506430.146992"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506430.4099753",
+            "value": "lapis-1576506430.4099753"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506430.683813",
+            "value": "lapis-1576506430.683813"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506430.9468017",
+            "value": "lapis-1576506430.9468017"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506431.2117867",
+            "value": "lapis-1576506431.2117867"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506431.4706404",
+            "value": "lapis-1576506431.4706404"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506431.732608",
+            "value": "lapis-1576506431.732608"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506432.0008583",
+            "value": "lapis-1576506432.0008583"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506432.261451",
+            "value": "lapis-1576506432.261451"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506432.5539324",
+            "value": "lapis-1576506432.5539324"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506432.8346667",
+            "value": "lapis-1576506432.8346667"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506433.1252162",
+            "value": "lapis-1576506433.1252162"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506433.3871462",
+            "value": "lapis-1576506433.3871462"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506499.734401",
+            "value": "lapis-1576506499.734401"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506500.006784",
+            "value": "lapis-1576506500.006784"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506500.2652671",
+            "value": "lapis-1576506500.2652671"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506500.5393286",
+            "value": "lapis-1576506500.5393286"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506500.816645",
+            "value": "lapis-1576506500.816645"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506501.0979717",
+            "value": "lapis-1576506501.0979717"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506501.374635",
+            "value": "lapis-1576506501.374635"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506501.6472929",
+            "value": "lapis-1576506501.6472929"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506501.9375143",
+            "value": "lapis-1576506501.9375143"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506502.2183251",
+            "value": "lapis-1576506502.2183251"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506502.4849913",
+            "value": "lapis-1576506502.4849913"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506502.7487855",
+            "value": "lapis-1576506502.7487855"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506503.013471",
+            "value": "lapis-1576506503.013471"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506503.2738993",
+            "value": "lapis-1576506503.2738993"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506503.5352056",
+            "value": "lapis-1576506503.5352056"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506503.7998352",
+            "value": "lapis-1576506503.7998352"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506504.066898",
+            "value": "lapis-1576506504.066898"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506504.3268526",
+            "value": "lapis-1576506504.3268526"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506504.5847425",
+            "value": "lapis-1576506504.5847425"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506504.8472877",
+            "value": "lapis-1576506504.8472877"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506505.1108012",
+            "value": "lapis-1576506505.1108012"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506505.3730402",
+            "value": "lapis-1576506505.3730402"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506505.6333497",
+            "value": "lapis-1576506505.6333497"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506505.8952398",
+            "value": "lapis-1576506505.8952398"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506506.1533847",
+            "value": "lapis-1576506506.1533847"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506506.4208653",
+            "value": "lapis-1576506506.4208653"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506506.6870713",
+            "value": "lapis-1576506506.6870713"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506506.9479597",
+            "value": "lapis-1576506506.9479597"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506507.212054",
+            "value": "lapis-1576506507.212054"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506507.4692385",
+            "value": "lapis-1576506507.4692385"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506507.7332628",
+            "value": "lapis-1576506507.7332628"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506507.9933352",
+            "value": "lapis-1576506507.9933352"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506508.25422",
+            "value": "lapis-1576506508.25422"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506508.514873",
+            "value": "lapis-1576506508.514873"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506508.7808065",
+            "value": "lapis-1576506508.7808065"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506509.0418804",
+            "value": "lapis-1576506509.0418804"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506509.3085356",
+            "value": "lapis-1576506509.3085356"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506509.5682774",
+            "value": "lapis-1576506509.5682774"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506509.8291996",
+            "value": "lapis-1576506509.8291996"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506510.0922318",
+            "value": "lapis-1576506510.0922318"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506510.3554184",
+            "value": "lapis-1576506510.3554184"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506510.614051",
+            "value": "lapis-1576506510.614051"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506510.8793397",
+            "value": "lapis-1576506510.8793397"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506511.140103",
+            "value": "lapis-1576506511.140103"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506511.3979838",
+            "value": "lapis-1576506511.3979838"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506511.6556778",
+            "value": "lapis-1576506511.6556778"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506511.9179227",
+            "value": "lapis-1576506511.9179227"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506512.188405",
+            "value": "lapis-1576506512.188405"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506512.450217",
+            "value": "lapis-1576506512.450217"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506512.711993",
+            "value": "lapis-1576506512.711993"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506599.5352263",
+            "value": "lapis-1576506599.5352263"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506602.9076142",
+            "value": "lapis-1576506602.9076142"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506606.4052663",
+            "value": "lapis-1576506606.4052663"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506609.7625399",
+            "value": "lapis-1576506609.7625399"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506613.5505357",
+            "value": "lapis-1576506613.5505357"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506617.0246146",
+            "value": "lapis-1576506617.0246146"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506620.628682",
+            "value": "lapis-1576506620.628682"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506624.7846894",
+            "value": "lapis-1576506624.7846894"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506629.1597874",
+            "value": "lapis-1576506629.1597874"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506632.6261566",
+            "value": "lapis-1576506632.6261566"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506636.3842163",
+            "value": "lapis-1576506636.3842163"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506640.0178642",
+            "value": "lapis-1576506640.0178642"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506643.5164366",
+            "value": "lapis-1576506643.5164366"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506646.9854147",
+            "value": "lapis-1576506646.9854147"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506650.8315525",
+            "value": "lapis-1576506650.8315525"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506654.6415026",
+            "value": "lapis-1576506654.6415026"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506658.1974008",
+            "value": "lapis-1576506658.1974008"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506661.4791565",
+            "value": "lapis-1576506661.4791565"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506665.1538017",
+            "value": "lapis-1576506665.1538017"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506669.0756013",
+            "value": "lapis-1576506669.0756013"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506672.4410508",
+            "value": "lapis-1576506672.4410508"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506676.0361197",
+            "value": "lapis-1576506676.0361197"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506679.6952674",
+            "value": "lapis-1576506679.6952674"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506683.5460262",
+            "value": "lapis-1576506683.5460262"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506687.0047193",
+            "value": "lapis-1576506687.0047193"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506690.510208",
+            "value": "lapis-1576506690.510208"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506694.1020372",
+            "value": "lapis-1576506694.1020372"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506697.4760945",
+            "value": "lapis-1576506697.4760945"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506700.9095724",
+            "value": "lapis-1576506700.9095724"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506704.2890975",
+            "value": "lapis-1576506704.2890975"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506707.647787",
+            "value": "lapis-1576506707.647787"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506708.794683",
+            "value": "lapis-1576506708.794683"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506709.94206",
+            "value": "lapis-1576506709.94206"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506711.0994465",
+            "value": "lapis-1576506711.0994465"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506712.2516181",
+            "value": "lapis-1576506712.2516181"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506713.40601",
+            "value": "lapis-1576506713.40601"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506714.5428379",
+            "value": "lapis-1576506714.5428379"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506715.6901598",
+            "value": "lapis-1576506715.6901598"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506716.8404458",
+            "value": "lapis-1576506716.8404458"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506717.9860983",
+            "value": "lapis-1576506717.9860983"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506719.1362584",
+            "value": "lapis-1576506719.1362584"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506720.288918",
+            "value": "lapis-1576506720.288918"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506721.4381561",
+            "value": "lapis-1576506721.4381561"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506722.5784125",
+            "value": "lapis-1576506722.5784125"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506723.7195344",
+            "value": "lapis-1576506723.7195344"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506724.8638797",
+            "value": "lapis-1576506724.8638797"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506726.0281906",
+            "value": "lapis-1576506726.0281906"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506727.181054",
+            "value": "lapis-1576506727.181054"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506728.3320587",
+            "value": "lapis-1576506728.3320587"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506729.4608557",
+            "value": "lapis-1576506729.4608557"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506730.6261044",
+            "value": "lapis-1576506730.6261044"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506731.7672694",
+            "value": "lapis-1576506731.7672694"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506732.9214861",
+            "value": "lapis-1576506732.9214861"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506734.0582464",
+            "value": "lapis-1576506734.0582464"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506735.1847043",
+            "value": "lapis-1576506735.1847043"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506736.3193817",
+            "value": "lapis-1576506736.3193817"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506737.4516227",
+            "value": "lapis-1576506737.4516227"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506738.590802",
+            "value": "lapis-1576506738.590802"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506739.7139962",
+            "value": "lapis-1576506739.7139962"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506740.8393996",
+            "value": "lapis-1576506740.8393996"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506742.0399237",
+            "value": "lapis-1576506742.0399237"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506756.920555",
+            "value": "lapis-1576506756.920555"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506771.8128912",
+            "value": "lapis-1576506771.8128912"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506786.740906",
+            "value": "lapis-1576506786.740906"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506801.4173398",
+            "value": "lapis-1576506801.4173398"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506816.3405168",
+            "value": "lapis-1576506816.3405168"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506831.4551547",
+            "value": "lapis-1576506831.4551547"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506846.4956746",
+            "value": "lapis-1576506846.4956746"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506861.3694785",
+            "value": "lapis-1576506861.3694785"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506876.1083875",
+            "value": "lapis-1576506876.1083875"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506891.2032256",
+            "value": "lapis-1576506891.2032256"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506906.0445356",
+            "value": "lapis-1576506906.0445356"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506920.9689968",
+            "value": "lapis-1576506920.9689968"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506935.9790008",
+            "value": "lapis-1576506935.9790008"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506951.0815997",
+            "value": "lapis-1576506951.0815997"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506966.3581376",
+            "value": "lapis-1576506966.3581376"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506982.95332",
+            "value": "lapis-1576506982.95332"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576506999.0953114",
+            "value": "lapis-1576506999.0953114"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576507015.6710153",
+            "value": "lapis-1576507015.6710153"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576507033.406656",
+            "value": "lapis-1576507033.406656"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576507049.9939663",
+            "value": "lapis-1576507049.9939663"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576507066.5163186",
+            "value": "lapis-1576507066.5163186"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576507082.7218125",
+            "value": "lapis-1576507082.7218125"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576507097.8878496",
+            "value": "lapis-1576507097.8878496"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576507113.0285585",
+            "value": "lapis-1576507113.0285585"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576507128.2890916",
+            "value": "lapis-1576507128.2890916"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576507143.4277515",
+            "value": "lapis-1576507143.4277515"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576507158.8725963",
+            "value": "lapis-1576507158.8725963"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576507174.2132213",
+            "value": "lapis-1576507174.2132213"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576507189.3646882",
+            "value": "lapis-1576507189.3646882"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508326.023292",
+            "value": "lapis-1576508326.023292"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508326.2999928",
+            "value": "lapis-1576508326.2999928"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508326.559073",
+            "value": "lapis-1576508326.559073"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508326.826294",
+            "value": "lapis-1576508326.826294"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508327.0834496",
+            "value": "lapis-1576508327.0834496"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508327.3598442",
+            "value": "lapis-1576508327.3598442"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508327.6175618",
+            "value": "lapis-1576508327.6175618"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508327.8731759",
+            "value": "lapis-1576508327.8731759"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508328.1291528",
+            "value": "lapis-1576508328.1291528"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508328.3842604",
+            "value": "lapis-1576508328.3842604"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508328.6460204",
+            "value": "lapis-1576508328.6460204"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508328.9055705",
+            "value": "lapis-1576508328.9055705"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508329.1623893",
+            "value": "lapis-1576508329.1623893"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508329.4126315",
+            "value": "lapis-1576508329.4126315"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508329.6711733",
+            "value": "lapis-1576508329.6711733"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508329.9268327",
+            "value": "lapis-1576508329.9268327"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508330.1896627",
+            "value": "lapis-1576508330.1896627"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508330.4464266",
+            "value": "lapis-1576508330.4464266"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508330.7034912",
+            "value": "lapis-1576508330.7034912"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508330.9600382",
+            "value": "lapis-1576508330.9600382"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508331.2220132",
+            "value": "lapis-1576508331.2220132"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508331.4798987",
+            "value": "lapis-1576508331.4798987"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508331.7392325",
+            "value": "lapis-1576508331.7392325"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508331.9963677",
+            "value": "lapis-1576508331.9963677"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508332.257664",
+            "value": "lapis-1576508332.257664"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508332.5144572",
+            "value": "lapis-1576508332.5144572"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508332.7878072",
+            "value": "lapis-1576508332.7878072"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508333.0445037",
+            "value": "lapis-1576508333.0445037"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508333.2953603",
+            "value": "lapis-1576508333.2953603"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508333.5538785",
+            "value": "lapis-1576508333.5538785"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508333.8374088",
+            "value": "lapis-1576508333.8374088"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508334.1223464",
+            "value": "lapis-1576508334.1223464"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508334.397464",
+            "value": "lapis-1576508334.397464"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508334.6766539",
+            "value": "lapis-1576508334.6766539"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508334.955145",
+            "value": "lapis-1576508334.955145"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508335.2316163",
+            "value": "lapis-1576508335.2316163"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508335.499759",
+            "value": "lapis-1576508335.499759"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508335.7765157",
+            "value": "lapis-1576508335.7765157"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508336.0521462",
+            "value": "lapis-1576508336.0521462"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508336.3241224",
+            "value": "lapis-1576508336.3241224"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508336.5997155",
+            "value": "lapis-1576508336.5997155"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508336.8760517",
+            "value": "lapis-1576508336.8760517"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508337.155525",
+            "value": "lapis-1576508337.155525"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508337.430114",
+            "value": "lapis-1576508337.430114"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508337.7070942",
+            "value": "lapis-1576508337.7070942"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508337.9911692",
+            "value": "lapis-1576508337.9911692"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508338.2697191",
+            "value": "lapis-1576508338.2697191"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508338.5425637",
+            "value": "lapis-1576508338.5425637"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508338.8134797",
+            "value": "lapis-1576508338.8134797"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508339.0872948",
+            "value": "lapis-1576508339.0872948"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508339.361348",
+            "value": "lapis-1576508339.361348"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508339.6373801",
+            "value": "lapis-1576508339.6373801"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508339.910727",
+            "value": "lapis-1576508339.910727"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508340.1911974",
+            "value": "lapis-1576508340.1911974"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508340.4657648",
+            "value": "lapis-1576508340.4657648"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508340.743754",
+            "value": "lapis-1576508340.743754"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508341.0202186",
+            "value": "lapis-1576508341.0202186"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508341.2940004",
+            "value": "lapis-1576508341.2940004"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508341.5705938",
+            "value": "lapis-1576508341.5705938"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508341.8403225",
+            "value": "lapis-1576508341.8403225"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508342.179796",
+            "value": "lapis-1576508342.179796"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508342.4578388",
+            "value": "lapis-1576508342.4578388"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508342.7349157",
+            "value": "lapis-1576508342.7349157"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508343.0141053",
+            "value": "lapis-1576508343.0141053"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508343.2909863",
+            "value": "lapis-1576508343.2909863"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508343.571647",
+            "value": "lapis-1576508343.571647"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508343.8443272",
+            "value": "lapis-1576508343.8443272"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508344.1260228",
+            "value": "lapis-1576508344.1260228"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508344.4007754",
+            "value": "lapis-1576508344.4007754"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508344.6737425",
+            "value": "lapis-1576508344.6737425"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508344.948368",
+            "value": "lapis-1576508344.948368"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508345.2228231",
+            "value": "lapis-1576508345.2228231"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508345.4955704",
+            "value": "lapis-1576508345.4955704"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508345.765926",
+            "value": "lapis-1576508345.765926"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508346.0420787",
+            "value": "lapis-1576508346.0420787"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508346.3141968",
+            "value": "lapis-1576508346.3141968"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508346.5958452",
+            "value": "lapis-1576508346.5958452"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508346.8704724",
+            "value": "lapis-1576508346.8704724"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508347.1486435",
+            "value": "lapis-1576508347.1486435"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508347.417264",
+            "value": "lapis-1576508347.417264"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508347.6889348",
+            "value": "lapis-1576508347.6889348"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508347.9623542",
+            "value": "lapis-1576508347.9623542"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508348.2376537",
+            "value": "lapis-1576508348.2376537"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508348.5091846",
+            "value": "lapis-1576508348.5091846"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508348.7804263",
+            "value": "lapis-1576508348.7804263"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508349.055267",
+            "value": "lapis-1576508349.055267"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508349.3328831",
+            "value": "lapis-1576508349.3328831"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508349.6019614",
+            "value": "lapis-1576508349.6019614"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508349.8729832",
+            "value": "lapis-1576508349.8729832"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508350.1487868",
+            "value": "lapis-1576508350.1487868"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508350.4624643",
+            "value": "lapis-1576508350.4624643"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508350.7909288",
+            "value": "lapis-1576508350.7909288"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508351.10333",
+            "value": "lapis-1576508351.10333"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508351.41651",
+            "value": "lapis-1576508351.41651"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508351.7252104",
+            "value": "lapis-1576508351.7252104"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508352.0382636",
+            "value": "lapis-1576508352.0382636"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508352.340177",
+            "value": "lapis-1576508352.340177"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508352.6484597",
+            "value": "lapis-1576508352.6484597"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508352.9565015",
+            "value": "lapis-1576508352.9565015"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508353.2714896",
+            "value": "lapis-1576508353.2714896"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508353.5810215",
+            "value": "lapis-1576508353.5810215"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508353.8882394",
+            "value": "lapis-1576508353.8882394"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508354.2058258",
+            "value": "lapis-1576508354.2058258"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508354.504633",
+            "value": "lapis-1576508354.504633"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508354.8079078",
+            "value": "lapis-1576508354.8079078"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508355.113064",
+            "value": "lapis-1576508355.113064"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508355.4162464",
+            "value": "lapis-1576508355.4162464"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508355.730381",
+            "value": "lapis-1576508355.730381"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508356.1309454",
+            "value": "lapis-1576508356.1309454"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508356.4649754",
+            "value": "lapis-1576508356.4649754"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508356.7742295",
+            "value": "lapis-1576508356.7742295"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508357.086682",
+            "value": "lapis-1576508357.086682"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508357.4105792",
+            "value": "lapis-1576508357.4105792"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508357.7139688",
+            "value": "lapis-1576508357.7139688"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508358.016797",
+            "value": "lapis-1576508358.016797"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508358.3222752",
+            "value": "lapis-1576508358.3222752"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508358.636596",
+            "value": "lapis-1576508358.636596"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508358.9544837",
+            "value": "lapis-1576508358.9544837"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508359.2613006",
+            "value": "lapis-1576508359.2613006"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1576508359.5996883",
+            "value": "lapis-1576508359.5996883"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1579527204.7408988",
+            "value": "lapis-1579527204.7408988"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580034506.685816",
+            "value": "lapis-1580034506.685816"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580038171.5752969",
+            "value": "lapis-1580038171.5752969"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580043693.0378737",
+            "value": "lapis-1580043693.0378737"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580104960.0519974",
+            "value": "lapis-1580104960.0519974"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580107465.8198438",
+            "value": "lapis-1580107465.8198438"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580115293.495048",
+            "value": "lapis-1580115293.495048"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580115310.0677805",
+            "value": "lapis-1580115310.0677805"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580115359.6936073",
+            "value": "lapis-1580115359.6936073"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580115932.6913805",
+            "value": "lapis-1580115932.6913805"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580116281.4942021",
+            "value": "lapis-1580116281.4942021"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580116487.3287137",
+            "value": "lapis-1580116487.3287137"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580116530.0936754",
+            "value": "lapis-1580116530.0936754"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580116576.9927342",
+            "value": "lapis-1580116576.9927342"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580116643.7998989",
+            "value": "lapis-1580116643.7998989"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580116704.1234512",
+            "value": "lapis-1580116704.1234512"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580116780.9767296",
+            "value": "lapis-1580116780.9767296"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580116943.5819132",
+            "value": "lapis-1580116943.5819132"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580117455.2141845",
+            "value": "lapis-1580117455.2141845"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580127813.3012006",
+            "value": "lapis-1580127813.3012006"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580129064.913012",
+            "value": "lapis-1580129064.913012"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580130443.5360289",
+            "value": "lapis-1580130443.5360289"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580131897.7010455",
+            "value": "lapis-1580131897.7010455"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580132943.1380877",
+            "value": "lapis-1580132943.1380877"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580133966.0479562",
+            "value": "lapis-1580133966.0479562"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580134258.441383",
+            "value": "lapis-1580134258.441383"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580198588.8532417",
+            "value": "lapis-1580198588.8532417"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580198636.1813245",
+            "value": "lapis-1580198636.1813245"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580198730.6788003",
+            "value": "lapis-1580198730.6788003"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580198782.2454257",
+            "value": "lapis-1580198782.2454257"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580198884.8096662",
+            "value": "lapis-1580198884.8096662"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580198956.6278436",
+            "value": "lapis-1580198956.6278436"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580198989.9884453",
+            "value": "lapis-1580198989.9884453"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580199019.6931818",
+            "value": "lapis-1580199019.6931818"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580199918.4201434",
+            "value": "lapis-1580199918.4201434"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580200206.530983",
+            "value": "lapis-1580200206.530983"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580200303.5582252",
+            "value": "lapis-1580200303.5582252"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580200766.3045306",
+            "value": "lapis-1580200766.3045306"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580200851.1708486",
+            "value": "lapis-1580200851.1708486"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580200954.208713",
+            "value": "lapis-1580200954.208713"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580200975.3317966",
+            "value": "lapis-1580200975.3317966"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580201015.4680002",
+            "value": "lapis-1580201015.4680002"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580201043.533463",
+            "value": "lapis-1580201043.533463"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580201303.8439183",
+            "value": "lapis-1580201303.8439183"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580205164.9998605",
+            "value": "lapis-1580205164.9998605"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580205580.0344837",
+            "value": "lapis-1580205580.0344837"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580205628.0222888",
+            "value": "lapis-1580205628.0222888"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580205640.26119",
+            "value": "lapis-1580205640.26119"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580205709.0939844",
+            "value": "lapis-1580205709.0939844"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580205965.5638418",
+            "value": "lapis-1580205965.5638418"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580206112.687092",
+            "value": "lapis-1580206112.687092"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580206218.580903",
+            "value": "lapis-1580206218.580903"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580206265.483235",
+            "value": "lapis-1580206265.483235"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580206271.971804",
+            "value": "lapis-1580206271.971804"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580206318.9308276",
+            "value": "lapis-1580206318.9308276"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580206332.4226036",
+            "value": "lapis-1580206332.4226036"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580206341.0149179",
+            "value": "lapis-1580206341.0149179"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580206358.8059816",
+            "value": "lapis-1580206358.8059816"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580206393.4501586",
+            "value": "lapis-1580206393.4501586"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580206421.2760077",
+            "value": "lapis-1580206421.2760077"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580206444.6301112",
+            "value": "lapis-1580206444.6301112"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580206564.0191731",
+            "value": "lapis-1580206564.0191731"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580206591.563096",
+            "value": "lapis-1580206591.563096"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580206625.2180152",
+            "value": "lapis-1580206625.2180152"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580206653.7456956",
+            "value": "lapis-1580206653.7456956"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580207092.4949284",
+            "value": "lapis-1580207092.4949284"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580207111.7103868",
+            "value": "lapis-1580207111.7103868"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580208037.3593159",
+            "value": "lapis-1580208037.3593159"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580208199.0411553",
+            "value": "lapis-1580208199.0411553"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580208283.5242712",
+            "value": "lapis-1580208283.5242712"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580208924.0009375",
+            "value": "lapis-1580208924.0009375"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580209644.8045397",
+            "value": "lapis-1580209644.8045397"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580209731.4436498",
+            "value": "lapis-1580209731.4436498"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580209755.7299473",
+            "value": "lapis-1580209755.7299473"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580213839.3160982",
+            "value": "lapis-1580213839.3160982"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580213866.975071",
+            "value": "lapis-1580213866.975071"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580214011.127858",
+            "value": "lapis-1580214011.127858"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580214082.1773386",
+            "value": "lapis-1580214082.1773386"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580214128.632119",
+            "value": "lapis-1580214128.632119"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580214186.809282",
+            "value": "lapis-1580214186.809282"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580214206.5265868",
+            "value": "lapis-1580214206.5265868"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580214209.0124164",
+            "value": "lapis-1580214209.0124164"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580214210.0927176",
+            "value": "lapis-1580214210.0927176"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580214211.0683763",
+            "value": "lapis-1580214211.0683763"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580214211.9833705",
+            "value": "lapis-1580214211.9833705"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580214212.8281755",
+            "value": "lapis-1580214212.8281755"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580214343.0553868",
+            "value": "lapis-1580214343.0553868"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580307590.609921",
+            "value": "lapis-1580307590.609921"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580307646.303819",
+            "value": "lapis-1580307646.303819"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580307843.496102",
+            "value": "lapis-1580307843.496102"
+          },
+          {
+            "selected": false,
+            "text": "lapis-1580313006.3660195",
+            "value": "lapis-1580313006.3660195"
+          },
+          {
+            "selected": true,
+            "text": "lapis-1580471550.1472065",
+            "value": "lapis-1580471550.1472065"
+          }
+        ],
+        "query": "SHOW TAG VALUES WITH KEY = \"tardis\" ",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "1969-12-31T23:00:00.000Z",
+    "to": "1970-01-01T00:59:59.000Z"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "",
+  "title": "Pool Overview",
+  "uid": "flWZ-z8Wk",
+  "version": 4
+}
