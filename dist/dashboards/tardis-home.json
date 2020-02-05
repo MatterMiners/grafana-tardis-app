@@ -5,12 +5,110 @@
   "tags": ["TARDIS"],
   "style": "dark",
   "timezone": "browser",
-  "editable": true,
+  "editable": false,
   "hideControls": true,
   "sharedCrosshair": false,
-  "rows": [],
+  "rows": [
+    {
+      "collapse": false,
+      "editable": true, 
+      "height": "39px",
+      "panels": [
+        {
+          "content": "<h1>TARDIS</h1>",
+          "editable": true,
+          "error": false,
+          "id": 2,
+          "links": [],
+          "mode": "html",
+          "span": 12,
+          "style": {},
+          "title": "",
+          "transparent": true,
+          "type": "text"
+        }
+      ],
+      "title": ""
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "330px",
+      "panels": [
+        {
+          "editable": true,
+          "error": false,
+          "id": 5,
+          "span": 7.5,
+          "height": "550px",
+          "title": "",
+          "type": "tardis-site-list"
+        },
+        {
+          "content": "",
+          "editable": true,
+          "error": false,
+          "id": 4,
+          "links": [],
+          "mode": "markdown",
+          "span": 0.5,
+          "style": {},
+          "title": "",
+          "transparent": true,
+          "type": "text"
+        }, 
+        {
+          "editable": true,
+          "error": false,
+          "id": 1,
+          "span": 4,
+          "title": "",
+          "type": "tardis-cta"
+        },
+        {
+          "content": "",
+          "editable": true,
+          "error": false,
+          "id": 6,
+          "links": [],
+          "mode": "markdown",
+          "span": 0.5,
+          "style": {},
+          "title": "",
+          "transparent": true,
+          "type": "text"
+        }, 
+        {
+          "editable": true,
+          "error": false,
+          "id": 3,
+          "limit": 10,
+          "links": [],
+          "mode": "search",
+          "query": "",
+          "span": 4,
+          "tags": [
+            "TARDIS"
+          ],
+          "title": "TARDIS dashboards",
+          "type": "dashlist"
+        }
+      ],
+      "title": "Row"
+    }, 
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [],
+      "title": "Endpoint List Row"
+    }
+  ],
+
+
+
   "time": {
-    "from": "now-1h",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {
@@ -43,6 +141,6 @@
     "list": []
   },
   "schemaVersion": 11,
-  "version": 17,
+  "version": 1,
   "links": []
 }

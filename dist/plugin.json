@@ -11,7 +11,7 @@
     }, 
     "keywords": ["grafana", "tardis", "cobald", "opportunistic resources"],
     "logos": {
-      "small": "img/tardis_logo.svg",
+      "small": "img/tardis_logo_grafana.svg",
       "large": "img/tardis_logo.svg"
     },
     "links": [
@@ -31,6 +31,12 @@
       "path": "dashboards/tardis-home.json",
       "addToNav": true,
       "defaultNav": true
+    },
+    {
+      "type": "dashboard",
+      "name": "TARDIS Site Comparison",
+      "path": "dashboards/tardis-site-comparison.json",
+      "addToNav": false
     }
   ],
 
